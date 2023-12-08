@@ -1,11 +1,14 @@
 {
-    "id": "custom-character-sheet-sections",
-    "title": "Custom Character Sheet Sections",
+    "id": "character-sheet-sections",
+    "title": "Character Sheet Sections",
     "description": "",
     "authors": [
         {
             "name": "enso",
             "discord": "enso#0361"
+        },
+        {
+            "name": "Daniel Stricoff"
         }
     ],
     "version": "1.0.0",
@@ -16,11 +19,11 @@
     "relationships": {
         "systems": [
             {
-                "id": "dnd5e",
+                "id": "pf2e",
                 "type": "system",
                 "compatibility": {
-                    "minimum": "2.0.0",
-                    "verified": "2.0.0"
+                    "minimum": "5.8.0",
+                    "verified": "5.8.3"
                 }
             }
         ],
@@ -45,7 +48,4 @@
             "path": "./lang/en.json"
         }
     ],
-    "url": "https://github.com/jessev14/custom-character-sheet-sections",
-    "manifest": "https://github.com/jessev14/custom-character-sheet-sections/releases/latest/download/module.json",
-    "download": "https://github.com/jessev14/custom-character-sheet-sections/releases/download/1.0.0/CCSS.zip"
 }
