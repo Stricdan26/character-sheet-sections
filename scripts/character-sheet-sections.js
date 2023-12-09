@@ -35,36 +35,6 @@ Hooks.on("renderItemSheet", (app, [html], appData) => {
 });
 
 
-// Hooks.on("renderActorSheet5eCharacter", (app, html, appData) => {
-//     // Remove "Add Item" buttons from custom sections on character sheet
-//     const addButtons = html.find(`div.controls`);
-//     addButtons.each(function() {
-//         // Default dnd5e sheet
-//         const firstItemLi = $(this).closest(`li.items-header`).next(`ol.item-list`).find(`li.item`);
-//         const firstItem = app.object.items.get(firstItemLi?.data("itemId"));
-
-//         // Tidy5e sheet
-//         const prevItemLi = $(this).closest(`li.items-footer`).prev(`li.item`);
-//         const prevItem = app.object.items.get(prevItemLi?.data("itemId"));
-
-//         const item = firstItem || prevItem;
-//         const customSectionName = item?.getFlag(moduleID, "sectionName");
-//         if (!customSectionName) return;
-
-//         $(this).remove();
-//         return;
-//     });
-
-//     if (game.settings.get(moduleID, 'hideEmpty')) {
-//         const headers = html[0].querySelectorAll('li.items-header');
-//         for (const header of headers) {
-//             const ol = header.nextElementSibling;
-//             if (ol.tagName !== 'OL' || ol.childElementCount) continue;
-    
-//             header.remove();
-//         }
-//     }
-// });
 
     /**
      *  TODO: 
