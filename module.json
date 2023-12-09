@@ -39,7 +39,7 @@
         ]
     },
     "esmodules": [
-        "./scripts/custom-character-sheet-sections.js"
+        "./scripts/character-sheet-sections.js"
     ],
     "languages": [
         {
@@ -47,5 +47,5 @@
             "name": "English",
             "path": "./lang/en.json"
         }
-    ],
+    ]
 }
