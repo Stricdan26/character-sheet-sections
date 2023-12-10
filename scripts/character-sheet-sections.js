@@ -34,14 +34,6 @@ Hooks.on("renderItemSheet", (app, [html], appData) => {
     return;
 });
 
-
-
-    /**
-     *  TODO: 
-        Look at the item array and get a list of the ID's for each item with a flag of "sectionNam
-        that is not "". Make sure this item is also of type action. For each section name, remove 
-        item from the list of actions, add a new section, and append it there.
-     */
 async function customSectionGetData(wrapped) {
     // Call wrapped function to get appData
     const data = await wrapped();
@@ -67,7 +59,6 @@ async function customSectionGetData(wrapped) {
         }
     }
     
-    
     var customActions = []
 
     // For items flagged with a custom section, remove them from their original section
@@ -89,7 +80,6 @@ async function customSectionGetData(wrapped) {
         const customSection = item.flags[moduleID].sectionName
 
         // Grab action based on id
-
         data["actions"]["encounter"][customSection].actions.push(customActions.find(action => action.id === item._id)); // TODO: Map to action instead of item with the ID
     }
 
