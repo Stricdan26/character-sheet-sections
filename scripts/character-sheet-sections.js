@@ -34,6 +34,29 @@ Hooks.on("renderItemSheet", (app, [html], appData) => {
     return;
 });
 
+
+Hooks.on("renderActorSheetPF2e", (app, html, appData) => {
+    // Get the list of items with custom sections
+    const itemsWithCustomSections = app.object.items.filter(i => i.flags[moduleID]?.sectionName);
+
+    // Get the unique names of custom sections
+    const customSections = [...new Set(itemsWithCustomSections.map(i => i.flags[moduleID].sectionName))];
+
+    // Loop through each custom section
+    for (const sectionName of customSections) {
+        // Find the corresponding HTML element for the custom section
+        const sectionElement = html.find(`h3.header:contains("${sectionName}")`);
+
+        // Check if the section element exists
+        if (sectionElement.length > 0) {
+            // Remove the div.controls element from the custom section
+            sectionElement.find("div.controls").remove();
+        }
+    }
+});
+
+
+
 async function customSectionGetData(wrapped) {
     // Call wrapped function to get appData
     const data = await wrapped();
