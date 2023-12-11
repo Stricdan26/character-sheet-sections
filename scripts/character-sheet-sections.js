@@ -25,7 +25,7 @@ Hooks.on("renderItemSheet", (app, [html], appData) => {
         flex-direction: column;
     `;
     customSectionInput.innerHTML = `
-        <label>${game.i18n.localize(`${moduleID}.customSection`)}</label>
+        <label>Custom Section</label>
         <input style="text-align: left;" type="text" name="flags.${moduleID}.sectionName" value="${app.object.flags[moduleID]?.sectionName || ""}" />
     `;
     const itemProperties = html.querySelector(`div.inventory-details, div.feat-details`);
